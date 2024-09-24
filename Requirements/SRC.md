@@ -81,22 +81,41 @@
 <a name="user_interface"/>
 
 ## 2.2 Интерфейс пользователя
-Главное окно приложения.  
+Вход в приложение.  
 
-![Главное окно приложения]()  
+![Вход в приложение](https://github.com/Tonitruc/Realty-Market/blob/master/Mockups/Enter.png)  
 
 Окно регистрации нового пользователя.  
 
-![Окно регистрации нового пользователя]() 
+![Окно регистрации нового пользователя](https://github.com/Tonitruc/Realty-Market/blob/master/Mockups/Registration.png) 
 
-Окно просмотра детализированной информации о событии. 
+Окно каталога объявлений о недвижимости.
 
-![Окно просмотра детализированной информации об объявлении]()  
+![Окно каталога объявлений о недвижимости](https://github.com/Tonitruc/Realty-Market/blob/master/Mockups/Catalog.png)  
 
-Окно добавления нового события.  
+Окно добавления нового объявления.  
 
-![Окно добавления нового объявления]().
+![Окно добавления нового объявления](https://github.com/Tonitruc/Realty-Market/blob/master/Mockups/Add%20Advertisement.png).
+
+Окно просмотра информации о недвижимости.  
+
+![Окно просмотра информации о недвижимости](https://github.com/Tonitruc/Realty-Market/blob/master/Mockups/Advertisement%20Preview.png).
+
+Окно избранных объявлений.  
+
+![Окно избранных объявлений](https://github.com/Tonitruc/Realty-Market/blob/master/Mockups/Favourites.png).
                                   
+Окно пользователя.  
+
+![Окно пользователя](https://github.com/Tonitruc/Realty-Market/blob/master/Mockups/User.png).
+
+Окно выбора местопложения недвижимости.  
+
+![Окно выбора местопложения недвижимости](https://github.com/Tonitruc/Realty-Market/blob/master/Mockups/ChooseLocation.png).
+
+Окно фильтра для поиска недвижимости.  
+
+![Окно фильтра для поиска недвижимости](https://github.com/Tonitruc/Realty-Market/blob/master/Mockups/Filter.png).
 
 <a name="user_specifications"/>
 
