@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:RealtyMarket.Controls" 
+             x:Class="RealtyMarket.Controls.GrEntry">
+
+    <Grid x:Name="ParentGrid" RowDefinitions="Auto,Auto">
+        <Image x:Name="EntryImage"
+               IsVisible="False"
+               HeightRequest="25"
+               Grid.RowSpan="2"
+               Margin="0,0,5,10"/>
+        <Label x:Name="EntryName"
+               TranslationY="0"
+               FontSize="16"
+               Margin="0,8,0,0"/>
+
+        <local:BorderlessEntry x:Name="EntryLine"
+                               Focused="OnEntryFocused"
+                               Unfocused="OnEntryUnfocused"
+                               VerticalOptions="Center"
+                               IsPassword="False"/>
+
+        <BoxView x:Name="Underline"
+                 HeightRequest="2" 
+                 Margin="0,30,0,0"/>
+
+        <ImageButton x:Name="PasswordHideButton"
+                     Source="hide_password.png"
+                     HeightRequest="30" 
+                     Clicked="OnTogglePasswordVisibilityTapped"/>
+
+        <Grid Margin="0,0,0,0" Grid.Row="1" x:Name="MessagesGrid">
+            <Label x:Name="IsErrorMessage"
+                   TextColor="Red"
+                   FontSize="12"
+                   Margin="0,0,0,0" 
+                   HorizontalOptions="Start"/>
+            <Label x:Name="MessageLabel"
+                   TextColor="{Binding Source={x:Reference Underline}, Path=BackgroundColor}"
+                   FontSize="12"
+                   FontFamily="NexaBold"
+                   Margin="0,0,0,0" 
+                   HorizontalOptions="Start"/>
+            <Label x:Name="MaxLengthLabel"
+                   IsVisible="False"
+                   HorizontalOptions="End"/>
+        </Grid>
+    </Grid>
+
+</ContentView>

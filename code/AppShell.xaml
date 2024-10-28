@@ -4,11 +4,89 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:RealtyMarket"
-    Shell.FlyoutBehavior="Flyout">
+    xmlns:views="clr-namespace:RealtyMarket.Views"
+    Shell.FlyoutBehavior="Disabled"
+    Shell.BackgroundColor="#6a00f4">
 
-    
+    <Shell.TitleView>
+        <Grid Padding="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
 
-<ShellContent Title = "Autocomplete" ContentTemplate = "{DataTemplate local:AutocompleteFeatures}" Route ="AutocompleteFeatures" /> 
+            <Image Source="logo.png"
+                   HeightRequest="43"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Center"
+                   Grid.Column="0"
+                   Margin="0" />
 
+            <VerticalStackLayout Grid.Column="1">
+                <Label Text="Realty"
+                       FontFamily="Pavelt"
+                       FontSize="14"
+                       FontAttributes="None"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Start"
+                       TextColor="White"
+                       Margin="10,12,0,0" />
 
+                <Label Text="Market"
+                       FontFamily="Pavelt"
+                       FontSize="14"
+                       FontAttributes="None"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Start"
+                       TextColor="White"
+                       Margin="10,0,0,0" />
+            </VerticalStackLayout>
+        </Grid>
+    </Shell.TitleView>
+
+    <ShellContent Title = "LoginPage" 
+              ContentTemplate = "{DataTemplate views:LoginRegisterPage}" 
+              Route ="LoginPage" />
+
+    <TabBar IsVisible="True" x:Name="MainTabs" Route="MainTabs">
+        <Tab Title="Каталог" Icon="catalogicon.png">
+            <ShellContent Title = "CatalogPage" 
+                          Route="CatalogPage"
+                          ContentTemplate="{DataTemplate views:CatalogPage}" />
+        </Tab>
+        <Tab Title="Избранное" Icon="favoritesicon.png">
+            <ShellContent Title = "FavoritesPage" 
+                          Route="FavoritesPage"
+                          ContentTemplate="{DataTemplate views:FavoritesPage}" />
+        </Tab>
+        <Tab Title="Добавить" Icon="addadicon.png">
+            <ShellContent Title = "AddAdPage" 
+                          Route="AddAdPage"
+                          ContentTemplate="{DataTemplate views:AddAdPage}" />
+        </Tab>
+        <Tab Title="Профиль" Icon="profileicon.png">
+            <ShellContent Title = "ProfilePage" 
+                          Route="ProfilePage"
+                          ContentTemplate="{DataTemplate views:ProfilePage}" />
+        </Tab>
+    </TabBar>
+
+    <ShellContent Title = "ConnectionLostPage" 
+                  ContentTemplate="{DataTemplate views:ConnectionLostPage}" 
+                  Route="NoInternetPage"/>
+    <ShellContent Title = "Map" 
+                  ContentTemplate="{DataTemplate views:MapPage}" 
+                  Route="MapPage"/>
+    <ShellContent Title = "MyAds" 
+                  ContentTemplate="{DataTemplate views:MyAdPage}" 
+                  Route="MyAdPage"/>
+    <ShellContent Title = "UserSettingsPage" 
+                  ContentTemplate="{DataTemplate views:UserSettingsPage}" 
+                  Route="UserSettingsPage"/>
+    <ShellContent Title = "FilterPage" 
+                  ContentTemplate="{DataTemplate views:FilterPage}" 
+                  Route="FilterPage"/>
+    <ShellContent Title = "AdvertisementPage" 
+                  ContentTemplate="{DataTemplate views:AdvertisementPage}" 
+                  Route="AdvertisementPage"/>
 </Shell>
